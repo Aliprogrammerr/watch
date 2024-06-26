@@ -1,11 +1,10 @@
+// ignore_for_file: file_names
 import 'package:flutter/material.dart';
-
 import '../constant/AppColors.dart';
 
 
 class AppTextStyle {
   AppTextStyle._();
-
   static const TextStyle splashText = TextStyle(
       fontFamily: "anjoman",
       fontSize: 22,
@@ -25,5 +24,11 @@ class AppTextStyle {
     fontFamily: "dana",
     fontSize: 16,
     color: MyColors.hintColor,
+  );
+  static const TextStyle editNumber = TextStyle(
+    fontFamily: "dana",
+    fontSize: 14, 
+    color: MyColors.editNumber,
+    fontWeight: FontWeight.w500
   );
 }

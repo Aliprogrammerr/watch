@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flex/compunents/TextStyles.dart';
 import 'package:flex/route/routeNames.dart';
 import 'package:flutter/material.dart';
@@ -5,7 +7,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import '../../constant/Strings.dart';
 import '../../constant/dimens.dart';
-import '../widgets/registerScreen_Widgets/AppBtn.dart';
+import '../widgets/Register_Widgets/AppBtn.dart';
 
 
 class Splashscreen extends StatelessWidget {

@@ -1,23 +1,35 @@
 import 'package:flex/route/routeNames.dart';
-import 'package:flex/view/Register/SplashScreen.dart';
+import 'package:flex/screnns/Register/SplashScreen.dart';
+import 'package:flex/screnns/Register/register/Authitication.drt.dart';
+import 'package:flex/screnns/main_screen/main_screen.dart';
 import 'package:get/get.dart';
-import '../view/Register/SendSmsScreen.dart';
-import '../view/Register/get_sms_Screen.dart';
+import '../screnns/Register/SendSmsScreen.dart';
+import '../screnns/Register/get_sms_Screen.dart';
 
 class Pages {
   Pages._();
   static List<GetPage<dynamic>> pages = [
     GetPage(
         name: NamedRoute.initialRoute,
-        page: () => const Splashscreen(),
+        page: () => Splashscreen(),
         transition: Transition.fade),
     GetPage(
         transition: Transition.fadeIn,
         name: NamedRoute.sendSmsScreen,
-        page: () => const SendSmsScreen()),
+        page: () => SendSmsScreen()),
     GetPage(
-        name:NamedRoute.getsmsScreen,
-        page: ()=> const GetSmsScreen(),
+        name: NamedRoute.getsmsScreen,
+        page: () => GetSmsScreen(),
         transition: Transition.fade),
+    GetPage(
+      name: NamedRoute.authitication,
+      page: () => Authitication(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: NamedRoute.mainScreen,
+      page: () => MainScreen(),
+      transition: Transition.leftToRight 
+      )
   ];
 }
