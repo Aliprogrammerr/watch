@@ -1,7 +1,7 @@
 import 'package:flex/route/routeNames.dart';
+import 'package:flex/screnns/Auth/Authitication.dart';
+import 'package:flex/screnns/main_screen/mianPage.dart';
 import 'package:flex/screnns/Register/SplashScreen.dart';
-import 'package:flex/screnns/Register/register/Authitication.drt.dart';
-import 'package:flex/screnns/main_screen/main_screen.dart';
 import 'package:get/get.dart';
 import '../screnns/Register/SendSmsScreen.dart';
 import '../screnns/Register/get_sms_Screen.dart';
@@ -11,7 +11,7 @@ class Pages {
   static List<GetPage<dynamic>> pages = [
     GetPage(
         name: NamedRoute.initialRoute,
-        page: () => Splashscreen(),
+        page: () => const Splashscreen(),
         transition: Transition.fade),
     GetPage(
         transition: Transition.fadeIn,
@@ -23,13 +23,12 @@ class Pages {
         transition: Transition.fade),
     GetPage(
       name: NamedRoute.authitication,
-      page: () => Authitication(),
+      page: () => const Authitication(),
       transition: Transition.cupertino,
     ),
     GetPage(
       name: NamedRoute.mainScreen,
-      page: () => MainScreen(),
-      transition: Transition.leftToRight 
+      page: () => const MainScreen(),
       )
   ];
 }

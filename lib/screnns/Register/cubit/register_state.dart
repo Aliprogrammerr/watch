@@ -8,7 +8,7 @@ abstract class RegisterState {}
 class RegisterInitial extends RegisterState {}
 class LoadingState extends RegisterState{}
 class VerifiedIsRegistered extends RegisterState{}
-class VerifiedNotRegisstered  extends RegisterState{}
+class VerifiedNotRegistered  extends RegisterState{}
 class ErrorState extends RegisterState{}
 class SentState  extends RegisterState{
   final mobile ; 

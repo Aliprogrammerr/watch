@@ -1,21 +1,25 @@
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:flex/constant/constant.dart';
+import 'package:flex/utils/SharedPrefernce_manager.dart';
+import 'package:flex/utils/shared_prefernses_const.dart';
 import 'package:flutter/material.dart';
 
 part 'register_state.dart';
 
 class RegisterCubit extends Cubit<RegisterState> {
+   
+
+   Dio dio = Dio();
   RegisterCubit() : super(RegisterInitial()) {
     emit(LogOut());
   }
 
-  final Dio _dio = Dio();
+
   sendSms(String mobile) async {
     emit(LoadingState());
     try {
-      await _dio
-          .post(EndPoint.sendSms, data: {"mobile": mobile}).then((value) {
+      await dio.post(EndPoint.sendSms, data: {"mobile": mobile}).then((value) {
         debugPrint(value.toString());
         if (value.statusCode == 201) {
           emit(SentState(mobile: mobile));
@@ -28,20 +32,21 @@ class RegisterCubit extends Cubit<RegisterState> {
     }
   }
     
-Dio dio = Dio();
-  varifyCode(String mobile, String code) {
-    try {
-      dio.post(EndPoint.checkSmsCode, data: {"mobile": mobile, "code": code}).then(
-          (value) {
-        debugPrint(value.toString());
 
+  varifyCode(String mobile, String code) {
+    emit(LoadingState());
+    try {
+      dio.post(EndPoint.checkSmsCode, data: {"mobile": mobile,"code":code}).then((value) {
+        debugPrint(value.toString());
         if (value.statusCode == 201) {
-          if (value.data["data"]["is_registered"]) {
+          SharedPerfencesManager().saveString(SharedPreferencesConsts.token,value.data["data"]["token"]);
+          if (value.data["data"]["is_registered"]){
             emit(VerifiedIsRegistered());
           } else {
-            VerifiedNotRegisstered();
+             emit(VerifiedNotRegistered());
           } 
-        } else {
+        } 
+        else {
           emit(ErrorState());
         }
       });

@@ -1,9 +1,11 @@
 
 // ignore_for_file: file_names
 import 'package:flex/route/routeNames.dart';
-import 'package:flex/screnns/Register/register/cubit/register_cubit.dart';
+import 'package:flex/screnns/Register/cubit/register_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import '../../constant/AppColors.dart';
 import '../../constant/Strings.dart';
 import '../../constant/dimens.dart';
@@ -14,7 +16,7 @@ import '../widgets/Register_Widgets/appTextFeild.dart';
 
 class SendSmsScreen extends StatelessWidget {
    SendSmsScreen({super.key});
-    TextEditingController _controller = TextEditingController();
+    final TextEditingController _controller = TextEditingController();
 
 
   @override
@@ -47,23 +49,19 @@ class SendSmsScreen extends StatelessWidget {
                     height: 30,
                   ),
                  
-                 
                   BlocConsumer<RegisterCubit,RegisterState>(
                     listener:(context, state) {
                       if(state is SentState){ 
-                  Navigator.pushNamed(context,NamedRoute.getsmsScreen,arguments:state.mobile );
-
-                        // Get.toNamed(NamedRoute.getsmsScreen,arguments: state.mobile);
-                      }else if(state is ErrorState){ 
-                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("there is an error here")));
-                       }
+                  // Navigator.pushNamed(context,NamedRoute.getsmsScreen,arguments:state.mobile );
+                        Get.toNamed(NamedRoute.getsmsScreen,arguments: state.mobile);
+                      }else if(state is ErrorState){}
                     },
                     builder:(context,state){
                       if(state is LoadingState){
                         return const Center(
                           child: CircularProgressIndicator(),
                         );}
-                      return  AppButton(
+                      return  AppButton( 
                         text: AppStrings.next,
                         width: size.width * .2,
                         ontap: () {
