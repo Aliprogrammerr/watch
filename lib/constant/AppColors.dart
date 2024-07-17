@@ -15,6 +15,9 @@ abstract class MyColors {
   static const Color iconColor = Colors.white;
   static const Color bottonNavActive = Colors.black;
   static const Color bottonNavNotActive = Color.fromARGB(255, 162, 162, 162);
+  static const Color apptextFeildColor = Color.fromARGB(255, 90, 90, 90); 
+
+
   
 
 }

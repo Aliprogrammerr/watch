@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Basket extends StatelessWidget {
-  const Basket({super.key});
-
+class Bakstet extends StatelessWidget {
+  const Bakstet({super.key});
   @override
   Widget build(BuildContext context) {
      return Center(
-      child: Text("baskter"),
+      child: Text("basket"),
     );
   }
 }

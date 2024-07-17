@@ -29,21 +29,43 @@ class _MainScreenState extends State<MainScreen> {
     return SafeArea(
         child: Scaffold(
       backgroundColor: MyColors.bakgroundColor,
-      appBar: Appbarrr(size: size),
+      
       body: Stack(
         children: [
           Positioned(
-              top: 40,
-              right: 0,
-              left: 0,
-              child: IndexedStack(
-                index: selectedIndex,
-                children: const [
-                  Basket(),
-                  HomeScreen(),
-                  Profie(),
-                ],
-              )),
+            top:0,
+            left:10,
+            right:10,
+            child:Padding(
+        padding: const EdgeInsets.symmetric(vertical: AppDimens.medium),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image.asset(Images.store,
+                color: MyColors.iconColor, width: size.width * .1),
+            Image.asset(
+              Images.logo,
+              width: size.width * .1,
+            ),
+          ],
+        ),
+      ),
+      ),
+          Positioned(
+            top: 70,
+            right:0,
+            left: 0,
+            child:IndexedStack(
+              index: selectedIndex,
+              children: [
+                Bakstet(),
+                HomeScreen(),
+                Profile()
+              ],
+            )
+          
+            ),
+       
           Positioned(
               bottom: 5,
               right: 0,
@@ -88,40 +110,4 @@ class _MainScreenState extends State<MainScreen> {
       selectedIndex = index;
     });
   }
-}
-
-class Appbarrr extends StatelessWidget implements PreferredSize {
-  const Appbarrr({
-    super.key,
-    required this.size,
-  });
-
-  final Size size;
-
-  @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: MyColors.bakgroundColor,
-      toolbarHeight: size.height * .1,
-      title: Padding(
-        padding: const EdgeInsets.symmetric(vertical: AppDimens.medium),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Image.asset(Images.store,
-                color: MyColors.iconColor, width: size.width * .1),
-            Image.asset(
-              Images.logo,
-              width: size.width * .1,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  @override
-  Widget get child => throw UnimplementedError();
-  @override
-  Size get preferredSize => Size(size.width, size.height * .1);
 }

@@ -1,4 +1,5 @@
 import 'package:flex/route/pages.dart';
+import 'package:flex/screnns/Auth/Authitication.dart';
 import 'package:flex/screnns/main_screen/mianPage.dart';
 import 'package:flex/screnns/Register/cubit/register_cubit.dart';
 
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         // const MainScreen()
            BlocBuilder<RegisterCubit,RegisterState>(builder:(context,state){
           if(state is LogOut){
-            return  MainScreen();
+            return  Authitication();
           }
           else if(state is LogIn){
             return const MainScreen();

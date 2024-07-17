@@ -28,6 +28,7 @@ class Pages {
     ),
     GetPage(
       name: NamedRoute.mainScreen,
+      transition: Transition.fade,
       page: () => const MainScreen(),
       )
   ];

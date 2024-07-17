@@ -29,6 +29,7 @@ class AppTextFeild extends StatelessWidget {
               height: 10,
             ),
             TextField(
+              textInputAction:TextInputAction.next,
               controller:controller ,
               keyboardType: type,
               decoration: InputDecoration(
