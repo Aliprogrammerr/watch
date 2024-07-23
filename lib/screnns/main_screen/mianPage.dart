@@ -2,7 +2,7 @@ import 'package:flex/constant/AppColors.dart';
 import 'package:flex/constant/dimens.dart';
 import 'package:flex/constant/images.dart';
 import 'package:flex/screnns/main_screen/basket.dart';
-import 'package:flex/screnns/main_screen/homeScareen.dart';
+import 'package:flex/screnns/home/homeScareen.dart';
 import 'package:flex/screnns/main_screen/profileScreen.dart';
 import 'package:flex/screnns/main_screen/widgets/BottomNavItem.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +29,6 @@ class _MainScreenState extends State<MainScreen> {
     return SafeArea(
         child: Scaffold(
       backgroundColor: MyColors.bakgroundColor,
-      
       body: Stack(
         children: [
           Positioned(
@@ -57,7 +56,7 @@ class _MainScreenState extends State<MainScreen> {
             left: 0,
             child:IndexedStack(
               index: selectedIndex,
-              children: [
+              children: const [
                 Bakstet(),
                 HomeScreen(),
                 Profile()

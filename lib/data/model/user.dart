@@ -41,7 +41,6 @@ User({
         phone: map["phone"],
         postal_code: map["p ostal_code"]
         );
-
-    }
+    } 
 
 }

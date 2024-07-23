@@ -38,16 +38,17 @@ class _AuthiticationState extends State<Authitication> {
       body:  Column(
               children: [
                  Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: AppDimens.medium),
+                  padding: EdgeInsets.symmetric(horizontal: AppDimens.medium),
                    child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                      children: [
-                      // AppButton(width: size.width *0.1, ontap: (){
-                      //   Get.toNamed(NamedRoute.mainScreen);
-                      // }, text: "بعدا"),
-                    //  TextButton(onPressed: (){
-                    //   Get.toNamed(NamedRoute.mainScreen);
-                    //  }, child: const Text("بعدا",style:AppTextStyle.title,)),
+                    //   AppButton(width: size.width *0.1, ontap: (){
+                    //     Get.toNamed(NamedRoute.mainScreen);
+                    //   }, text: "بعدا"),
+                     TextButton(
+                      onPressed: (){
+                      Get.toNamed(NamedRoute.mainScreen);
+                     }, child: const Text("بعدا",style:AppTextStyle.title,)),
                        const Logo(),
                      ],
                    ),
