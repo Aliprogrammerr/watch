@@ -7,4 +7,6 @@ class NamedRoute {
   static const getsmsScreen = "/getsmsScreen";
   static const authitication = "/authitication";
   static const mainScreen = "/mainScreen";
+  static const productDitail = "/productDitail";
+  static const searchPage = "/searchPage";
 }

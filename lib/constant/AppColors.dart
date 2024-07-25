@@ -18,4 +18,5 @@ abstract class MyColors {
   static const Color apptextFeildColor = Color.fromARGB(255, 90, 90, 90); 
   static const Color homePagebg = Color.fromARGB(255, 41, 41, 41);
   static const Color productBg = Color.fromARGB(255, 86, 86, 86);  
+  static const Color productColor = Color.fromARGB(255, 103, 103, 103);
 }

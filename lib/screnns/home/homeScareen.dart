@@ -3,11 +3,13 @@ import 'package:flex/compunents/TextStyles.dart';
 import 'package:flex/constant/AppColors.dart';
 import 'package:flex/constant/Strings.dart';
 import 'package:flex/constant/dimens.dart';
+import 'package:flex/route/routeNames.dart';
 import 'package:flex/screnns/widgets/AppSlider.dart';
 import 'package:flex/screnns/widgets/homeTiteProduct.dart';
 import 'package:flex/screnns/widgets/product.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -40,13 +42,13 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         InkWell(
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ProductList()));
+            Get.toNamed(NamedRoute.searchPage);
           },
           child: Container(
             margin: const EdgeInsets.symmetric(horizontal: AppDimens.large),
             height: size.height * .07,
             decoration: BoxDecoration(
-                color: MyColors.apptextFeildColor,
+                color: const Color.fromARGB(255, 65, 65, 65),
                 borderRadius: BorderRadius.circular(AppDimens.medium)),
             child: const Row(
               children: [
@@ -65,6 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             ),
+            const SizedBox(height: 10,),
           AppSlider(imgList: imageListb),
          Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppDimens.large ),
@@ -87,13 +90,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       TitleProductbtn(
                         text:  AppStrings.mostWatch,
-                          size: size,
+                          width : size.width *.4,
                           isActive: selectedIndex == HomeNavigation.mostWatch,
                           ontap: () => homeProductTitle(
                               index: HomeNavigation.mostWatch)),
                       TitleProductbtn(
                         text: AppStrings.trendTarin,
-                          size: size,
+                          width : size.width *.4,
                           isActive: selectedIndex == HomeNavigation.trendTarin,
                           ontap: () => homeProductTitle(
                               index: HomeNavigation.trendTarin)),
@@ -108,11 +111,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(
                       height: 420,
                       child: ProductList(),),
-
-
-
                    //second page
-                   Text("trendTarin")
+                      SizedBox(
+                      height: 420,
+                      child: ProductList(),),
                   ],
                 )
               ],
@@ -147,7 +149,7 @@ class ProductList extends StatelessWidget {
             childAspectRatio:.7,
             ),
           itemBuilder: (context , index){
-            return Product(price: 2000,productName: "dfs",);  
+            return Product(price: 2000,productName: "dfs",);
           }),
       ),);
   }

@@ -12,5 +12,10 @@ abstract class AppStrings {
   static const String textFeildTEext = "طرح یا مدل ساعتی که دنبالشی";
   static const String trendTarin = "ترند ترین";
   static const String mostWatch = "پربازدید ترین";
-
-  }
+  static const String features = "خصوصیات";
+  static const String review  = "نقد و بررسی";
+  static const String comments = "نظرات";
+  static const String addToCart = "افزودن به سبد خرید";
+  static const String clear = "تسویه";
+   
+}

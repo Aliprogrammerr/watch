@@ -57,7 +57,7 @@ class _MainScreenState extends State<MainScreen> {
             child:IndexedStack(
               index: selectedIndex,
               children: const [
-                Bakstet(),
+                Basket(),
                 HomeScreen(),
                 Profile()
               ],
@@ -65,40 +65,40 @@ class _MainScreenState extends State<MainScreen> {
           
             ),
        
-          // Positioned(
-          //     bottom: 5,
-          //     right: 0,
-          //     left: 0,
-          //     child: Container(
-          //       margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-          //       height: size.height * .08,
-          //       decoration: const BoxDecoration(
-          //           color: MyColors.primaryColor,
-          //           borderRadius:
-          //               BorderRadius.all(Radius.circular(AppDimens.medium))),
-          //       child: Row(
-          //         crossAxisAlignment: CrossAxisAlignment.center,
-          //         mainAxisAlignment: MainAxisAlignment.spaceAround,
-          //         children: [
-          //           BottomNavItem(
-          //             ontap: () =>
-          //                 bottomNavOntap(index: BtnNaivgationScreem.shop),
-          //             icon: Icons.store,
-          //             isAtice: selectedIndex == BtnNaivgationScreem.shop,
-          //           ),
-          //           BottomNavItem(
-          //               ontap: () =>
-          //                   bottomNavOntap(index: BtnNaivgationScreem.home),
-          //               icon: Icons.home,
-          //               isAtice: selectedIndex == BtnNaivgationScreem.home),
-          //           BottomNavItem(
-          //               ontap: () =>
-          //                   bottomNavOntap(index: BtnNaivgationScreem.profile),
-          //               icon: Icons.person,
-          //               isAtice: selectedIndex == BtnNaivgationScreem.profile)
-          //         ],
-          //       ),
-          //     ))
+          Positioned(
+              bottom: 5,
+              right: 0,
+              left: 0,
+              child: Container(
+                margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                height: size.height * .08,
+                decoration: const BoxDecoration(
+                    color: MyColors.primaryColor,
+                    borderRadius:
+                        BorderRadius.all(Radius.circular(AppDimens.medium))),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    BottomNavItem(
+                      ontap: () =>
+                          bottomNavOntap(index: BtnNaivgationScreem.shop),
+                      icon: Icons.store,
+                      isAtice: selectedIndex == BtnNaivgationScreem.shop,
+                    ),
+                    BottomNavItem(
+                        ontap: () =>
+                            bottomNavOntap(index: BtnNaivgationScreem.home),
+                        icon: Icons.home,
+                        isAtice: selectedIndex == BtnNaivgationScreem.home),
+                    BottomNavItem(
+                        ontap: () =>
+                            bottomNavOntap(index: BtnNaivgationScreem.profile),
+                        icon: Icons.person,
+                        isAtice: selectedIndex == BtnNaivgationScreem.profile)
+                  ],
+                ),
+              ))
         ],
       ),
     ));

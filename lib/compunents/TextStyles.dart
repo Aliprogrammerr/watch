@@ -14,7 +14,7 @@ class AppTextStyle {
       fontFamily: "anjoman",
       fontSize: 14,
       color: MyColors.blackColor,
-      fontWeight: FontWeight.w700);
+      fontWeight: FontWeight.w800);
   static const TextStyle title = TextStyle(
     color: MyColors.title,
     fontFamily: "dana",

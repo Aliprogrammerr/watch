@@ -6,12 +6,11 @@ class TitleProductbtn extends StatelessWidget {
   const TitleProductbtn({
     super.key,
     required this.ontap,
-    required this.size,
     required this.isActive,
-    required this.text
+    required this.text,
+    required this.width
   });
-
-  final Size size;
+  final double width;
   final bool isActive;
   final Function() ontap;
   final String text;
@@ -22,7 +21,7 @@ class TitleProductbtn extends StatelessWidget {
       onTap: ontap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 300),
-        width: size.width * .4,
+        width:width,
         height: 50,
         decoration: BoxDecoration(
             color: isActive ? MyColors.primaryColor : MyColors.blackColor,
