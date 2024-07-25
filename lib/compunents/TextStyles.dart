@@ -31,4 +31,40 @@ class AppTextStyle {
     color: MyColors.editNumber,
     fontWeight: FontWeight.w500
   );
+  static const TextStyle productitle1= TextStyle(
+    color: MyColors.blackColor,
+    fontFamily: "anjoman",
+    fontSize: 16,
+    fontWeight: FontWeight.w700
+  );
+  static const TextStyle productitle2= TextStyle(
+     color: MyColors.title,
+    fontFamily: "anjoman",
+    fontSize: 16,
+    fontWeight: FontWeight.w700
+  );
+  static const TextStyle productTitle = TextStyle(
+    color: MyColors.title,
+    fontFamily: "anjoman",
+    fontSize: 15,
+    fontWeight: FontWeight.w400 
+  );
+  static const TextStyle productPrice = TextStyle(
+    color: MyColors.title,
+    fontFamily: "anjoman",
+    fontSize: 15,
+  );
+  static const TextStyle productPriceDiscount = TextStyle(
+    color: MyColors.title,
+    fontFamily: "anjoman",
+    fontSize: 12,
+    decoration: TextDecoration.lineThrough
+  );
+  static const TextStyle timer = TextStyle(
+    fontFamily: "anjoman",
+    fontSize: 18,
+    color: MyColors.blackColor , 
+    fontWeight: FontWeight.w600
+
+  );
 }

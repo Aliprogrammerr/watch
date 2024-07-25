@@ -7,7 +7,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import '../../constant/Strings.dart';
 import '../../constant/dimens.dart';
-import '../widgets/Register_Widgets/AppBtn.dart';
+import '../widgets/AppBtn.dart';
 
 
 class Splashscreen extends StatelessWidget {

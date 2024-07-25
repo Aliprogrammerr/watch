@@ -1,10 +1,8 @@
- 
-
 import 'package:dio/dio.dart';
 import 'package:flex/constant/constant.dart';
 import 'package:flex/data/model/home.dart';
 import 'package:flex/utils/response_validators.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
+
 
 abstract class IHomeDataSrc {
   Future<Home> getHome();

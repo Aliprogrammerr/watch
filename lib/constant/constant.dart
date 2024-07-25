@@ -10,8 +10,6 @@ class EndPoint {
   static const search = "$baseurl/search/";
   static const home = "$baseurl/home ";
 }
-
-
 class ProductSortRoute{
   static const newestProducts = "/newest_products";
   static const cheapestProducts = "/cheapest_products";

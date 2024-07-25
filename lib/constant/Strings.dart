@@ -10,5 +10,7 @@ abstract class AppStrings {
   static const String editNumber = "ویرایش شماره";
   static const String verifyCodeHint = "*-*-*-*-*";
   static const String textFeildTEext = "طرح یا مدل ساعتی که دنبالشی";
-  
+  static const String trendTarin = "ترند ترین";
+  static const String mostWatch = "پربازدید ترین";
+
   }

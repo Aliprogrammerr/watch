@@ -9,9 +9,9 @@ import 'package:get/get_core/src/get_main.dart';
 import '../../constant/AppColors.dart';
 import '../../constant/Strings.dart';
 import '../../constant/dimens.dart';
-import '../widgets/Register_Widgets/AppBtn.dart';
-import '../widgets/Register_Widgets/Logo.dart';
-import '../widgets/Register_Widgets/appTextFeild.dart';
+import '../widgets/AppBtn.dart';
+import '../widgets/Logo.dart';
+import '../widgets/appTextFeild.dart';
 
 
 class SendSmsScreen extends StatelessWidget {

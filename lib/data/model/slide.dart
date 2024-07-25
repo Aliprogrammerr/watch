@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 class Slide {
   Slide({required this.id, required this.image, required this.title});
   int id;

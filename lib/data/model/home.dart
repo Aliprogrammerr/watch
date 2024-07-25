@@ -1,7 +1,7 @@
 
 
 
-import 'package:flex/data/model/Product.dart';
+import 'package:flex/data/model/product.dart';
 import 'package:flex/data/model/banner.dart';
 import 'package:flex/data/model/catefgory.dart';
 import 'package:flex/data/model/slide.dart';

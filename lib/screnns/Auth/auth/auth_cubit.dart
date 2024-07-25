@@ -1,11 +1,11 @@
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
-import 'package:flex/constant/constant.dart';
-import 'package:flex/data/model/user.dart';
-import 'package:flex/utils/SharedPrefernce_manager.dart';
-import 'package:flex/utils/shared_prefernses_const.dart';
+// import 'package:flex/constant/constant.dart';
+// import 'package:flex/data/model/user.dart';
+// import 'package:flex/utils/SharedPrefernce_manager.dart';
+// import 'package:flex/utils/shared_prefernses_const.dart';
 
-import 'package:get/get.dart' as prefix;
+// import 'package:get/get.dart' as prefix;
 
 part 'auth_state.dart';
 
@@ -13,7 +13,7 @@ class AuthCubit extends Cubit<AuthState> {
   AuthCubit() : super(AuthInitial());
 
 
-  final Dio _dio = Dio();
+  // final Dio _dio = Dio();
   
 
 

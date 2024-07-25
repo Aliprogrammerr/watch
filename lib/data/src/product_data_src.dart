@@ -3,7 +3,7 @@
 
 import 'package:dio/dio.dart';
 import 'package:flex/constant/constant.dart';
-import 'package:flex/data/model/Product.dart';
+import 'package:flex/data/model/product.dart';
 import 'package:flex/utils/response_validators.dart';
 
 abstract class IProductDataSrc {

@@ -1,14 +1,11 @@
 import 'package:flex/route/pages.dart';
-import 'package:flex/screnns/Auth/Authitication.dart';
 import 'package:flex/screnns/main_screen/mianPage.dart';
 import 'package:flex/screnns/Register/cubit/register_cubit.dart';
-
 import 'package:flex/themes/AppThemes.dart';
 import 'package:flex/utils/SharedPrefernce_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
-
 import 'screnns/Register/SplashScreen.dart';
 
 
@@ -34,13 +31,13 @@ class MyApp extends StatelessWidget {
         // const MainScreen()
            BlocBuilder<RegisterCubit,RegisterState>(builder:(context,state){
           if(state is LogOut){
-            return  MainScreen();
+            return   const MainScreen();
           }
           else if(state is LogIn){
             return const MainScreen();
           }
           else {
-            return  Splashscreen();
+            return  const Splashscreen();
           }
         }),
            ),

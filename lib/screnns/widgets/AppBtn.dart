@@ -2,8 +2,8 @@
 
 import 'package:flex/compunents/TextStyles.dart';
 import 'package:flutter/material.dart';
-import '../../../constant/AppColors.dart';
-import '../../../constant/dimens.dart';
+import '../../constant/AppColors.dart';
+import '../../constant/dimens.dart';
 
 
 class AppButton extends StatelessWidget {

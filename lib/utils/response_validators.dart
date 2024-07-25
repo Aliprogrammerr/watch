@@ -1,7 +1,4 @@
 
-
-
-
 class HttpResponseValidators {
   static bool isValidStatusCode(int statusCode){
     if(statusCode >= 200 && statusCode < 300){
@@ -18,10 +15,8 @@ class HttpExpention implements Exception {
   HttpExpention({required this.statusCode});
 
 
- @override
  String tostring(){
   String massage;
-
   switch(statusCode){
   case 400 :
     massage = "bad requset";

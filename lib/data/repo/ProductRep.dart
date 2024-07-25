@@ -1,6 +1,4 @@
-
-
-import 'package:flex/data/model/Product.dart';
+import 'package:flex/data/model/product.dart';
 import 'package:flex/data/src/product_data_src.dart';
 
 abstract class IProductRepo {
