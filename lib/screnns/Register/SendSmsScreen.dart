@@ -52,7 +52,7 @@ class SendSmsScreen extends StatelessWidget {
                   BlocConsumer<RegisterCubit,RegisterState>(
                     listener:(context, state) {
                       if(state is SentState){ 
-                  // Navigator.pushNamed(context,NamedRoute.getsmsScreen,arguments:state.mobile );
+
                         Get.toNamed(NamedRoute.getsmsScreen,arguments: state.mobile);
                       }else if(state is ErrorState){}
                     },

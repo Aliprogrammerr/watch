@@ -9,4 +9,5 @@ class NamedRoute {
   static const mainScreen = "/mainScreen";
   static const productDitail = "/productDitail";
   static const searchPage = "/searchPage";
+  
 }

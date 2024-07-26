@@ -1,4 +1,5 @@
 import 'package:flex/route/pages.dart';
+import 'package:flex/screnns/home/homeScareen.dart';
 import 'package:flex/screnns/main_screen/mianPage.dart';
 import 'package:flex/screnns/Register/cubit/register_cubit.dart';
 import 'package:flex/themes/AppThemes.dart';
