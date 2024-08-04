@@ -1,9 +1,7 @@
-import 'package:flex/route/binding.dart';
+
 import 'package:flex/route/pages.dart';
 import 'package:flex/screnns/Auth/auth/auth_cubit.dart';
-import 'package:flex/screnns/home/bloc/home_bloc.dart';
 import 'package:flex/screnns/main_screen/mianPage.dart';
-import 'package:flex/screnns/product_Ditail/bloc%20/productditail_bloc.dart';
 import 'package:flex/themes/AppThemes.dart';
 import 'package:flex/utils/SharedPrefernce_manager.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +24,6 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context)=> AuthCubit()),
       ],
       child:  GetMaterialApp(
-        initialBinding: HomeBinding(),
         getPages: Pages.pages,
         locale: const Locale("fa"),
         title: 'Flutter Demo',

@@ -1,3 +1,4 @@
+import 'package:flex/route/binding.dart';
 import 'package:flex/route/routeNames.dart';
 import 'package:flex/screnns/Auth/Authitication.dart';
 import 'package:flex/screnns/product_Ditail/producDitail.dart';
@@ -29,6 +30,7 @@ class Pages {
       transition: Transition.cupertino,
     ),
     GetPage(
+      binding:HomeBinding()  ,
       name: NamedRoute.mainScreen,
       transition: Transition.fade,
       page: () => const MainScreen(),
