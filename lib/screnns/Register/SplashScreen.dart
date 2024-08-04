@@ -2,12 +2,13 @@
 
 import 'package:flex/compunents/TextStyles.dart';
 import 'package:flex/route/routeNames.dart';
+import 'package:flex/widget/AppBtn.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import '../../constant/Strings.dart';
 import '../../constant/dimens.dart';
-import '../widgets/AppBtn.dart';
+
 
 
 class Splashscreen extends StatelessWidget {

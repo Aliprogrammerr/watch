@@ -2,6 +2,9 @@
 // ignore_for_file: file_names
 import 'package:flex/route/routeNames.dart';
 import 'package:flex/screnns/Register/cubit/register_cubit.dart';
+import 'package:flex/widget/AppBtn.dart';
+import 'package:flex/widget/Logo.dart';
+import 'package:flex/widget/appTextFeild.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
@@ -9,9 +12,6 @@ import 'package:get/get_core/src/get_main.dart';
 import '../../constant/AppColors.dart';
 import '../../constant/Strings.dart';
 import '../../constant/dimens.dart';
-import '../widgets/AppBtn.dart';
-import '../widgets/Logo.dart';
-import '../widgets/appTextFeild.dart';
 
 
 class SendSmsScreen extends StatelessWidget {

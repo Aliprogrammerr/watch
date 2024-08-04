@@ -8,16 +8,17 @@ import 'package:flex/constant/Strings.dart';
 import 'package:flex/constant/dimens.dart';
 import 'package:flex/route/routeNames.dart';
 import 'package:flex/screnns/Register/cubit/register_cubit.dart';
-import 'package:flex/screnns/widgets/AppBtn.dart';
-import 'package:flex/screnns/widgets/Logo.dart';
-import 'package:flex/screnns/widgets/appTextFeild.dart';
+import 'package:flex/utils/formatTime.dart';
+import 'package:flex/widget/AppBtn.dart';
+import 'package:flex/widget/Logo.dart';
+import 'package:flex/widget/appTextFeild.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 // import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 
 class GetSmsScreen extends StatefulWidget {
-  GetSmsScreen({super.key});
+  const GetSmsScreen({super.key});
 
   @override
   State<GetSmsScreen> createState() => _GetSmsScreenState();
@@ -28,7 +29,7 @@ class _GetSmsScreenState extends State<GetSmsScreen> {
 
   @override
   void initState() {
-startTimer();
+    startTimer();
     super.initState();
   }
 
@@ -48,15 +49,6 @@ startTimer();
       });
     });
   }
-  String formatTime(int sec){
-    int min = sec ~/ 60;
-    int seconds = sec % 60 ; 
-
-    String minStr = min.toString().padLeft(2,"0");
-    String secStr = seconds.toString().padLeft(2,"0");
-    return "$minStr:$secStr";
-  }
-
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +71,8 @@ startTimer();
               width: size.width * .85,
               height: size.height * .3,
               decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(AppDimens.medium)),
+                borderRadius:
+                    BorderRadius.all(Radius.circular(AppDimens.medium)),
                 color: MyColors.registerBoxBg,
               ),
               child: Column(
@@ -120,24 +113,25 @@ startTimer();
                         Get.toNamed(NamedRoute.authitication);
                       } else if (state is VerifiedIsRegistered) {
                         Get.toNamed(NamedRoute.mainScreen);
-                      }
-                      else if(state is ErrorState){
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("There is an eror man")));
+                      } else if (state is ErrorState) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                                content: Text("There is an eror man")));
                       }
                     },
                     builder: (context, state) {
-                         if(state is LoadingState){
-                          return const Center(
-                            child: CircularProgressIndicator(),
-                          );
-                      } 
-                        return AppButton( 
-                            text: AppStrings.next,
-                            width: size.width * .2,
-                            ontap: () {
-                              BlocProvider.of<RegisterCubit>(context).varifyCode(mobileRouteArg, _controller.text);
-                            });
-                      
+                      if (state is LoadingState) {
+                        return const Center(
+                          child: CircularProgressIndicator(),
+                        );
+                      }
+                      return AppButton(
+                          text: AppStrings.next,
+                          width: size.width * .2,
+                          ontap: () {
+                            BlocProvider.of<RegisterCubit>(context)
+                                .varifyCode(mobileRouteArg, _controller.text);
+                          });
                     },
                   )
                 ],
@@ -148,4 +142,4 @@ startTimer();
       ),
     );
   }
-}
+} 

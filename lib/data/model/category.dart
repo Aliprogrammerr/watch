@@ -1,4 +1,3 @@
-
 class Category {
   Category({required this.id, required this.image, required this.title});
   int id;
@@ -11,11 +10,11 @@ class Category {
         image: json["image"] as String,
         title: json["title"] as String);
   }
-  Map<String,dynamic> toJson(){
-    final Map<String,dynamic> data = Map<String,dynamic>();
-    data["id"]= ["id"];
-    data["title"]=["title"];
-    data["image"]=["image"];
-    return data; 
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data["id"] = ["id"];
+    data["title"] = ["title"];
+    data["image"] = ["image"];
+    return data;
   }
-} 
+}

@@ -1,9 +1,9 @@
 import 'package:flex/route/routeNames.dart';
 import 'package:flex/screnns/Auth/Authitication.dart';
-import 'package:flex/screnns/home/producDitail.dart';
-import 'package:flex/screnns/main_screen/earch_page.dart';
+import 'package:flex/screnns/product_Ditail/producDitail.dart';
 import 'package:flex/screnns/main_screen/mianPage.dart';
 import 'package:flex/screnns/Register/SplashScreen.dart';
+import 'package:flex/screnns/Search_Page/search_page.dart';
 import 'package:get/get.dart';
 import '../screnns/Register/SendSmsScreen.dart';
 import '../screnns/Register/get_sms_Screen.dart';
@@ -33,9 +33,6 @@ class Pages {
       transition: Transition.fade,
       page: () => const MainScreen(),
       ),
-      GetPage(
-        name: NamedRoute.productDitail,
-        page: ()=> ProductDitail()),
 
       GetPage(name: NamedRoute.searchPage,
       page: ()=> Search_Page())

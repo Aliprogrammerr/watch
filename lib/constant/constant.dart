@@ -8,6 +8,8 @@ class EndPoint {
   static const productsByCategory = "$baseurl/products_by_category/";
   static const search = "$baseurl/search/";
   static const home = "$baseurl/home";
+  static const productDitail = "$baseurl/product_details/";
+
 }
 
 class ProductSortRoute{

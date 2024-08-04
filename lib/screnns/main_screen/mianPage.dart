@@ -1,11 +1,13 @@
 import 'package:flex/constant/AppColors.dart';
 import 'package:flex/constant/dimens.dart';
 import 'package:flex/constant/images.dart';
-import 'package:flex/screnns/main_screen/basket.dart';
+import 'package:flex/screnns/basket/basket.dart';
 import 'package:flex/screnns/home/homeScareen.dart';
-import 'package:flex/screnns/main_screen/profileScreen.dart';
-import 'package:flex/screnns/main_screen/widgets/BottomNavItem.dart';
+import 'package:flex/screnns/profile/profileScreen.dart';
+import 'package:flex/widget/BottomNavItem.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class BtnNaivgationScreem {
   BtnNaivgationScreem._();
@@ -50,21 +52,20 @@ class _MainScreenState extends State<MainScreen> {
         ),
       ),
       ),
-          Positioned(
-            top: 70,
-            right:0,
-            left: 0,
-            child:IndexedStack(
-              index: selectedIndex,
-              children: const [
-                Basket(),
-                HomeScreen(),
-                Profile()
-              ],
-            )
+          Padding(
+            padding: EdgeInsets.only(top:80),
+            child: SingleChildScrollView(
+              child: IndexedStack(
+                    index: selectedIndex,
+                    children:  const [
+                      Basket(),
+                      HomeScreen(),
+                     Profile()
+                    ],
+                  ),
+                ),
+          ),
           
-            ),
-       
           Positioned(
               bottom: 5,
               right: 0,

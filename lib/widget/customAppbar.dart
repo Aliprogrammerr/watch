@@ -1,8 +1,7 @@
-
 import 'package:flex/compunents/TextStyles.dart';
 import 'package:flex/constant/AppColors.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:flutter/widgets.dart';
 
 class CustomAppbar extends StatelessWidget implements PreferredSize {
   const CustomAppbar({
@@ -12,26 +11,30 @@ class CustomAppbar extends StatelessWidget implements PreferredSize {
 
   final String title;
 
-
-
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: MyColors.bakgroundColor,
-      title:Row(
+      title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-        SizedBox(width: 10,),
-        Text(title , style: AppTextStyle.title,),
-        Image.asset("assets/png/logo-color.png",width: 70,),
-        ],) ,
-    
+
+          Center(
+            child: Text(
+              textAlign: TextAlign.start,
+              title,
+              style: AppTextStyle.title,
+            ),
+          ),
+
+        ],
+      ),
     );
   }
-  
+
   @override
   Widget get child => throw UnimplementedError();
-  
+
   @override
-  Size get preferredSize => Size.fromHeight(60);
+  Size get preferredSize => const Size.fromHeight(60);
 }

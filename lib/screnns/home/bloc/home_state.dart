@@ -1,18 +1,13 @@
 part of 'home_bloc.dart';
 
-abstract class HomeState extends Equatable {
-  const HomeState();
-  
-  @override
-  List<Object> get props => [];
-}
+@immutable
+abstract class HomeState {}
 
+class HomeLoading extends HomeState {}
 
-class HomeLoading extends HomeState{}
-
-class HomeError extends HomeState{}
-
-class HomeLoaded extends HomeState{
-  HomeLoaded({required this.home});
+class HomeLoeaded extends HomeState{
+  HomeLoeaded({required this.home});
   final Home home;
 }
+
+class HomeError extends HomeState{} 

@@ -2,9 +2,9 @@ import 'package:flex/compunents/TextStyles.dart';
 import 'package:flex/constant/AppColors.dart';
 import 'package:flex/constant/Strings.dart';
 import 'package:flex/constant/dimens.dart';
-import 'package:flex/screnns/widgets/AppBtn.dart';
+import 'package:flex/widget/AppBtn.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 
 class Basket extends StatefulWidget {
   const Basket({super.key});
@@ -42,7 +42,7 @@ class _BasketState extends State<Basket> {
             mainAxisAlignment:MainAxisAlignment.spaceBetween,
           children: [
             AppButton(width: size.width * .4, ontap: (){}, text: AppStrings.clear),
-            Text("final 3222",style: AppTextStyle.title,),
+            const Text("final 3222",style: AppTextStyle.title,),
           ],
         ))
         ],
@@ -80,11 +80,11 @@ class ProductInCart extends StatelessWidget {
                 width: 10,
               ),
           
-              Column(crossAxisAlignment: CrossAxisAlignment.start,
+              const Column(crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 25,),
+                  SizedBox(height: 25,),
                   Text("title is the titile  name",style: AppTextStyle.title,),
-                  const SizedBox(height: 5,),
+                  SizedBox(height: 5,),
                   Text("price",style: AppTextStyle.productPrice,),
                   Text("discout",style: AppTextStyle.productPrice,),
                 ],
@@ -92,7 +92,7 @@ class ProductInCart extends StatelessWidget {
               
             ],
           ),
-          Positioned(
+          const Positioned(
             bottom: 10,
             right :300,
             left: 0,

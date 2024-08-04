@@ -1,47 +1,40 @@
-
-class HttpResponseValidators {
-  static bool isValidStatusCode(int statusCode){
-    if(statusCode >= 200 && statusCode < 300){
+class HTTPResponseValidator {
+  static bool isValidStatusCode(int statusCode) {
+    if (statusCode >= 200 && statusCode < 300) {
       return true;
-    }else {
-      throw HttpExpention(statusCode:statusCode);
+    } else {
+      throw HTTPExeption(statusCode);
     }
   }
 }
 
-
-class HttpExpention implements Exception {
+class HTTPExeption implements Exception {
   final int statusCode;
-  HttpExpention({required this.statusCode});
+  HTTPExeption(this.statusCode);
 
+  @override
+  String toString() {
+    String message;
 
- String tostring(){
-  String massage;
-  switch(statusCode){
-  case 400 :
-    massage = "bad requset";
-    break;
-  case 401 : 
-    massage = "unAuthorized";
-    break;
-  case 403 : 
-     massage = "forbiden";
-     break;
-
-  case 409 :
-     massage = "conflict";
-     break;
-  case 500 :
-    massage = "internet server Erro";
-    break;
-
-  default:
-  massage = "unknown";
+    switch (statusCode) {
+      case 400:
+        message = 'Bad requset';
+        break;
+      case 401:
+        message = 'Unauthorized';
+        break;
+      case 403:
+        message = 'Forbidden';
+        break;
+      case 409:
+        message = 'Conflict';
+        break;
+      case 500:
+        message = 'Internal Server Error';
+        break;
+      default:
+        message = "Unknown Error";
+    }
+    return 'HTTPException: Status COde $statusCode, msg:$message';
   }
-
-   return "HttpExpention : status Code  $statusCode , msg: $massage";
-
-
-
- } 
 }

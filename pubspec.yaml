@@ -8,6 +8,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  json_annotation: any
+  freezed_annotation: any
   cupertino_icons: ^1.0.6
   get: ^4.6.6
   flutter_spinkit: ^5.2.1
@@ -20,10 +22,14 @@ dependencies:
   equatable: ^2.0.5
   carousel_slider: ^4.2.1
   flutter_animated_icons: ^1.0.1
+  # cached_network_image: ^3.3.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  json_serializable: any
+  build_runner: any
+  freezed: any
   flutter_lints: ^3.0.0
 flutter:
   uses-material-design: true
